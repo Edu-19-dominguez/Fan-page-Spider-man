@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(fondo4.jpg);
+    }
+.container-fluid{
+        
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.titulo-secundario{
+    color: whitesmoke;
+    font-size: 40px;
+    padding: 15px;
+    text-align: center;
+    text-shadow: 4px;
+}
+
+.card-title{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.card-text{
+
+    font-size: 13px;
+}
+
+.card-text1{
+
+    font-size: 15px;
+}
+
+.ajuste-card{
+    display: grid;
+    gap: 20px;
+
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+
+    border: solid 3px black;
+}
+
+.ajustar-imagen{
+    border: solid 2px black;
+}
+
+.contenedor{
+    width: 85%;
+    max-width: 20px auto;
+     margin: 0 auto;
+}
+
+.texto-pregunta{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.texto-respuesta{
+    color: aliceblue;
+    border: solid 2px black
+    
+}
+.contenedor-inicio{
+    width: 85%;
+     max-width: 20px auto;
+     margin: 0 auto;
+}
+
+
+
+.peli-imagenes{
+    height: 40vh;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+@media ( max-width ){
+
+    .peli-imagenes{ 
+    height: 30vh;
+
+}
+}
+
+.tops{
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    margin: 0 auto;
+}
