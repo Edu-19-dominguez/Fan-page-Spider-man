@@ -71,6 +71,7 @@ body{
     border: solid 2px black
     
 }
+
 .contenedor-inicio{
     width: 85%;
      max-width: 20px auto;
@@ -79,15 +80,58 @@ body{
 
 
 
-@media (max-width: 767.98px) {
-  .ajuste-carrusel {
-    min-height: 200px;
-  }
-  .peli-imagenes {
-    height: 100%;
-    object-fit: cover;
-  }
+/* --- CONFIGURACIÓN GENERAL (Para computadoras y tablets grandes) --- */
+
+.ajuste-carrusel {
+    border: 3px solid #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(226, 54, 54, 0.4);
+    margin: 2rem auto;
 }
+
+.peli-imagenes {
+    height: 450px; /* Altura en PC */
+    object-fit: cover; /* Recorta sutilmente en horizontal */
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Flechas de navegación */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+
+/* --- CONFIGURACIÓN PARA CELULARES (Pantallas menores a 768px) --- */
+@media (max-width: 767.98px) {
+    .peli-imagenes {
+        height: 220px; /* Reducimos la altura drásticamente para que entre en el celular */
+        object-fit: fill; /* O puedes usar 'contain' si prefieres que la imagen se achique por completo sin estirarse */
+    }
+
+    /* Achicamos y movemos las flechas para que no tapen toda la foto en el celular */
+    .carousel-control-prev, .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    .carousel-control-prev { left: 8px; }
+    .carousel-control-next { right: 8px; }
+    
+    /* Ocultamos los indicadores de abajo en celular para ganar espacio limpio */
+    .carousel-indicators {
+        display: none;
+    }
+}
+
 
 .tops {
   font-family: 'Poppins', sans-serif;
@@ -95,11 +139,11 @@ body{
   font-weight: 800;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #e50914; /* Rojo estilo Netflix */
+  background-color: #e50914;
   padding: 6px 16px;
   border-radius: 4px;
   display: inline-block;
-  margin-left: 1.5rem; /* Alineado con tus tarjetas */
+  margin-left: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -147,4 +191,66 @@ body{
   background-color: whitesmoke; 
   border-radius: 4px;        
   padding: 2px;              
+}
+
+.card-img-tops{
+    height: 250px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+/* Importamos una tipografía estilo cómic desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.titulo-secundario {
+    font-family: 'Bangers', 'Impact', sans-serif;
+    font-size: 3rem; /* Más grandes y llamativos */
+    color: #ad3030; /* El rojo característico de Marvel/Spider-Man */
+    text-transform: uppercase; /* Todo en mayúsculas para más impacto */
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    
+    /* Efecto de sombra/borde tipo cómic */
+    text-shadow: 
+        3px 3px 0px #000,
+        -1px -1px 0px #000,  
+        1px -1px 0px #000,
+        -1px 1px 0px #000,
+        1px 1px 0px #000;
+        
+    transition: transform 0.3s ease;
+}
+
+/* Un pequeño efecto interactivo cuando pasas el mouse */
+.titulo-secundario:hover {
+    transform: scale(1.05) rotate(-1deg);
+    color: #005a9c; /* Cambia al azul de Spider-Man al pasar el mouse */
+}
+
+.bloque-introduccion {
+    background-color: #fffbdf; /* Un tono amarillo suave, muy típico de los cuadros de narrador de cómics clásicos */
+    border: 3px solid #000;
+    padding: 1.5rem;
+    border-radius: 4px; /* Bordes casi rectos estilo viñeta */
+    box-shadow: 6px 6px 0px #000; /* Sombra sólida negra */
+    margin-bottom: 2.5rem;
+}
+
+.subtitulo-comic {
+    font-family: 'Bangers', sans-serif;
+    color: #b42525; /* Rojo Spider-Man */
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.descripcion-comic {
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
