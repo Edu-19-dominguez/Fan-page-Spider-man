@@ -5,10 +5,25 @@
 
 }
 
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(fondo4.jpg);
-    }
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(fondo4.jpg);
+  
+  
+  background-repeat: no-repeat;
+  
+  
+  background-attachment: fixed;
+  
+  
+  background-size: cover;
+  
+  
+  background-position: center center;
+  
+  
+  min-height: 100vh;
+}
 .container-fluid{
         
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -253,4 +268,92 @@ body{
     color: #222;
     line-height: 1.6;
     margin-bottom: 0;
+}
+
+
+
+.ajuste-card .card-footer .text-body-secondary {
+  font-size: 0.85rem !important; /* Mismo tamaño uniforme para todas */
+  font-weight: normal;           /* Evita que alguna herede negritas */
+  display: block;
+}
+
+/* 3. Tip extra: Alinea horizontalmente los footers si los textos tienen largos distintos */
+.ajuste-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.ajuste-card .card-body {
+  flex-grow: 1; /* Empuja el footer siempre hacia el fondo de la tarjeta */
+}
+
+/* 1. Obligamos a la columna de la imagen a ocupar todo el alto disponible */
+.card .row {
+  height: 100%;
+}
+
+.card .row > div:first-child {
+  display: flex;
+}
+
+/* 2. Hacemos que la imagen cubra todo el alto sin deformarse */
+.card .img-fluid {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Llena el espacio recortando suavemente los lados */
+  object-position: center top; /* Mantiene enfocada la parte superior/centro de la imagen */
+}
+
+/* --- ESTILOS PARA TU TARJETA DE MERCH --- */
+
+/* 1. Cambia el color del precio ($24.999) a bordó */
+.card-body .text-danger {
+  color: #800020 !important; /* Código HEX del color bordó */
+}
+
+/* 2. Cambia el color del botón "Comprar" a bordó */
+.card-body .btn-danger {
+  background-color: #800020 !important;
+  border-color: #800020 !important;
+  transition: background-color 0.2s ease-in-out; /* Suaviza el cambio de color */
+}
+
+/* 3. Efecto al pasar el mouse sobre el botón (borde y fondo un poco más oscuros) */
+.card-body .btn-danger:hover {
+  background-color: #5c0017 !important;
+  border-color: #5c0017 !important;
+}
+
+
+.card.border-danger,
+.card.border-primary,
+.card.border-dark {
+  border-color: #800020 !important;
+}
+
+.badge.bg-danger,
+.badge.bg-primary,
+.badge.bg-dark {
+  background-color: #800020 !important;
+  color: #ffffff !important; 
+}
+
+/* --- NUEVO ENCABEZADO PERIODÍSTICO --- */
+
+/* 1. Modificamos el título principal */
+.text-center.border-bottom.border-dark h1.display-4 {
+  color: #ffffff !important; /* Pasa a blanco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9) !important; /* Sombra negra para despegarlo del fondo */
+}
+
+/* 2. Modificamos el subtítulo en cursiva */
+.text-center.border-bottom.border-dark p.fst-italic {
+  color: #e0e0e0 !important; /* Un blanco tiza elegante */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important; /* Sombra sutil */
+}
+
+/* 3. Cambiamos la línea negra de abajo a color blanco translúcido */
+.text-center.border-bottom.border-dark {
+  border-color: rgba(255, 255, 255, 0.3) !important;
 }
