@@ -1,0 +1,35 @@
+@use '../utilities/variables' as *;
+
+@use '../utilities/mixins' as *;
+
+
+
+.text-center.border-bottom.border-dark {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+
+  h1.display-4 {
+    color: $color-text-light !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9) !important;
+  }
+
+  p.fst-italic {
+    color: $color-text-tiza !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
+  }
+}
+
+// Aplicamos el mixin en los íconos del menú
+.spidey-logo {
+  @include spidey-icon-style;
+  margin-right: 8px;
+}
+
+.spidey-menu-btn {
+  border: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.spidey-btn-img {
+  @include spidey-icon-style;
+}

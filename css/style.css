@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Grande", Geneva, Verdana, sans-serif;
+  background-image: url("../fondo4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor, .contenedor-inicio {
+  width: 85%;
+  max-width: 20px auto;
+  margin: 0 auto;
+}
+
+.text-center.border-bottom.border-dark {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+.text-center.border-bottom.border-dark h1.display-4 {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9) !important;
+}
+.text-center.border-bottom.border-dark p.fst-italic {
+  color: #e0e0e0 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+.spidey-logo {
+  height: 32px;
+  width: auto;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 2px;
+  margin-right: 8px;
+}
+
+.spidey-menu-btn {
+  border: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.spidey-btn-img {
+  height: 32px;
+  width: auto;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.titulo-secundario {
+  font-family: "Bangers", "Impact", sans-serif;
+  font-size: 3rem;
+  color: #ad3030;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+  transition: transform 0.3s ease-in-out;
+}
+.titulo-secundario:hover {
+  transform: scale(1.05) rotate(-1deg);
+  color: #005a9c;
+}
+
+.bloque-introduccion {
+  background-color: #fffbdf;
+  border: 3px solid #000000;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 6px 6px 0px #000000;
+  margin-bottom: 2.5rem;
+}
+
+.subtitulo-comic {
+  font-family: "Bangers", "Impact", sans-serif;
+  color: #b42525;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.descripcion-comic {
+  font-size: 1.1rem;
+  color: #222222;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.texto-pregunta {
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.texto-respuesta {
+  color: #f0f8ff;
+  border: solid 2px #000000;
+}
+
+.tops {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #e50914;
+  padding: 6px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ajuste-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  border: solid 3px #000000;
+}
+.ajuste-card .card-body {
+  flex-grow: 1;
+}
+.ajuste-card .card-footer .text-body-secondary {
+  font-size: 0.85rem !important;
+  font-weight: normal;
+  display: block;
+}
+
+.card .row {
+  height: 100%;
+}
+.card .row > div:first-child {
+  display: flex;
+}
+.card .img-fluid {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.card.border-danger, .card.border-primary, .card.border-dark {
+  border-color: #800020 !important;
+}
+
+.ajustar-imagen {
+  border: solid 2px #000000;
+}
+
+.card-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+
+.card-text {
+  font-size: 13px;
+}
+
+.card-text1 {
+  font-size: 15px;
+}
+
+.card-img-tops {
+  height: 250px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.card-body .text-danger {
+  color: #800020 !important;
+}
+.card-body .btn-danger {
+  background-color: #800020 !important;
+  border-color: #800020 !important;
+  transition: background-color 0.2s ease-in-out;
+}
+.card-body .btn-danger:hover {
+  background-color: #5c0017 !important;
+  border-color: #5c0017 !important;
+}
+
+.badge.bg-danger, .badge.bg-primary, .badge.bg-dark {
+  background-color: #800020 !important;
+  color: #ffffff !important;
+}
+
+.ajuste-carrusel {
+  border: 3px solid #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(226, 54, 54, 0.4);
+  margin: 2rem auto;
+}
+
+.peli-imagenes {
+  height: 450px;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .peli-imagenes {
+    height: 220px;
+    object-fit: fill;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  .carousel-control-prev {
+    left: 8px;
+  }
+  .carousel-control-next {
+    right: 8px;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+}
+.footer-blanco {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+.footer-blanco .btn-outline-dark:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+
+.hover-red:hover {
+  color: #dc3545 !important;
+  transition: color 0.2s ease-in-out;
+}
+
+

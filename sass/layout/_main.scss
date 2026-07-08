@@ -1,0 +1,192 @@
+@use '../utilities/variables' as *;
+
+@use '../utilities/mixins' as *;
+
+
+
+.titulo-secundario {
+  font-family: $font-comic;
+  font-size: 3rem; 
+  color: $color-spidey-red; 
+  text-transform: uppercase; 
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 
+    3px 3px 0px #000,
+    -1px -1px 0px #000,  
+    1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px 1px 0px #000;
+  @include smooth-transition(transform, 0.3s);
+
+  &:hover {
+    transform: scale(1.05) rotate(-1deg);
+    color: $color-spidey-blue; 
+  }
+}
+
+.bloque-introduccion {
+  background-color: $color-bg-comic; 
+  border: 3px solid $color-bg-dark;
+  padding: 1.5rem;
+  border-radius: 4px; 
+  @include comic-shadow(6px, 6px, $color-bg-dark); 
+  margin-bottom: 2.5rem;
+}
+
+.subtitulo-comic {
+  font-family: $font-comic;
+  color: #b42525; 
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.descripcion-comic {
+  font-size: 1.1rem;
+  color: $color-text-dark;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.texto-pregunta {
+  color: $color-text-light;
+  font-family: $font-code;
+  text-align: center;
+}
+
+.texto-respuesta {
+  color: $color-aliceblue;
+  border: solid 2px $color-bg-dark;
+}
+
+.tops {
+  font-family: $font-tops;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $color-text-light;
+  background-color: $color-marvel-red;
+  padding: 6px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  @include comic-shadow(0px, 4px, rgba(0, 0, 0, 0.1));
+}
+
+.ajuste-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+  border: solid 3px $color-bg-dark;
+
+  .card-body {
+    flex-grow: 1; 
+  }
+
+  .card-footer .text-body-secondary {
+    font-size: 0.85rem !important; 
+    font-weight: normal;           
+    display: block;
+  }
+}
+
+.card {
+  .row {
+    height: 100%;
+    > div:first-child { display: flex; }
+  }
+
+  .img-fluid {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    object-position: center top; 
+  }
+
+  &.border-danger, &.border-primary, &.border-dark {
+    border-color: $color-bordo !important;
+  }
+}
+
+.ajustar-imagen {
+  border: solid 2px $color-bg-dark;
+}
+
+.card-title { font-family: $font-card; font-size: 25px; }
+.card-text { font-size: 13px; }
+.card-text1 { font-size: 15px; }
+
+.card-img-tops {
+  height: 250px;
+  object-fit: contain;
+  background-color: $color-bg-gray;
+  padding: 10px;
+}
+
+.card-body {
+  .text-danger { color: $color-bordo !important; }
+
+  .btn-danger {
+    background-color: $color-bordo !important;
+    border-color: $color-bordo !important;
+    @include smooth-transition(background-color); 
+
+    &:hover {
+      background-color: $color-bordo-dark !important;
+      border-color: $color-bordo-dark !important;
+    }
+  }
+}
+
+.badge {
+  &.bg-danger, &.bg-primary, &.bg-dark {
+    background-color: $color-bordo !important;
+    color: $color-text-light !important; 
+  }
+}
+
+
+.ajuste-carrusel {
+  border: 3px solid $color-bg-dark;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+              0 0 15px rgba(226, 54, 54, 0.4);
+  margin: 2rem auto;
+}
+
+.peli-imagenes {
+  height: 450px; 
+  object-fit: cover; 
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  @include smooth-transition;
+}
+
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+@media (max-width: 767.98px) {
+  .peli-imagenes { height: 220px; object-fit: fill; }
+  .carousel-control-prev, .carousel-control-next { width: 35px; height: 35px; }
+  .carousel-control-prev { left: 8px; }
+  .carousel-control-next { right: 8px; }
+  .carousel-indicators { display: none; }
+}

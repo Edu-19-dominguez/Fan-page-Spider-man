@@ -1,0 +1,17 @@
+@mixin spidey-icon-style {
+  height: 32px;
+  width: auto;
+  background-color: whitesmoke; 
+  border-radius: 4px;        
+  padding: 2px;  
+}
+
+
+@mixin comic-shadow($x, $y, $color) {
+  box-shadow: #{$x} #{$y} 0px $color;
+}
+
+
+@mixin smooth-transition($prop: all, $time: 0.2s) {
+  transition: $prop $time ease-in-out;
+}

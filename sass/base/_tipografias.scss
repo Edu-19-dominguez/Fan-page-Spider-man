@@ -1,0 +1,22 @@
+@use '../utilities/variables' as *;
+
+
+body {
+  font-family: $font-main;
+  background-image: url('../fondo4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  font-family: $font-secundary;
+}
+
+.contenedor, .contenedor-inicio {
+  width: 85%;
+  max-width: 20px auto; 
+  margin: 0 auto;
+}
